@@ -6,10 +6,10 @@ class Solution {
         for(int i = 0; i < chalk.length; i++){
             sum += chalk[i];
         }
-        if(sum <= klong){
-            while(klong >= sum){ klong-= sum;}
-        }
-        
+        // if(sum <= klong){
+        //     while(klong >= sum){ klong-= sum;}
+        // }
+        klong %= sum;
         if(klong == 0) return 0;
         int studentNum = -1;
         for(int i = 0; i < chalk.length; i++){
