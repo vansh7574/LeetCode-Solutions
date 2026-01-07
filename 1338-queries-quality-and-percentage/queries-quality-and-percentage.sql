@@ -1,0 +1,2 @@
+/* Write your T-SQL query statement below */
+Select query_name, Round(Sum(rating * 1.0/position)/count(*),2) as quality, Round(100.0 * Count(case when rating < 3 THEN 1 ELSE null END)/Count(*),2) as poor_query_percentage  from Queries group by query_name
