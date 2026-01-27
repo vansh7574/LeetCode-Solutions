@@ -5,10 +5,8 @@ class Solution:
         for dir in split_path:
             if dir == '':
                continue
-            else: filtered_path.append(dir)
-        # print(filtered_path)   
+            else: filtered_path.append(dir)  
         stk = []
-        # stk.append("/")
         for dir in filtered_path:
             if dir != '..' and dir != '.':
                stk.append(dir)
@@ -18,5 +16,5 @@ class Solution:
                 continue
         res = "/".join(stk)                      
         res = "/" + res
-        # print(res)
+  
         return res
