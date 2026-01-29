@@ -1,0 +1,2 @@
+/* Write your T-SQL query statement below */
+Select dept_name, count(s.dept_id) as student_number from Student s Full Outer Join Department d on s.dept_id = d.dept_id group by d.dept_name order by Student_number desc, dept_name asc
