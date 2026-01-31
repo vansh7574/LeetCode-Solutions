@@ -9,9 +9,10 @@ class Solution:
         
         def invert(node):
             if node == None: return
-            temp = node.left
-            node.left = node.right
-            node.right = temp
+            # temp = node.left
+            # node.left = node.right
+            # node.right = temp
+            node.left, node.right = node.right, node.left 
             invert(node.left)
             invert(node.right)
 
