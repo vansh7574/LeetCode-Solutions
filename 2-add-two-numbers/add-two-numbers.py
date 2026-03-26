@@ -20,8 +20,8 @@ class Solution:
             if (l1_pointer != None and l1_pointer.next != None) or (l2_pointer != None and l2_pointer.next != None):
                 res_pointer.next = ListNode()
                 res_pointer = res_pointer.next
-            if l1_pointer!= None: l1_pointer = l1_pointer.next 
-            if l2_pointer!=None: l2_pointer = l2_pointer.next
+            if l1_pointer != None: l1_pointer = l1_pointer.next 
+            if l2_pointer != None: l2_pointer = l2_pointer.next
         if carry == 1:
             res_pointer.next = ListNode()
             res_pointer.next.val = 1
