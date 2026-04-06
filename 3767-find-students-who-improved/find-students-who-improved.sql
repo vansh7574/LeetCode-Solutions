@@ -1,6 +1,3 @@
-/* Write your T-SQL query statement below */
--- # Write your MySQL query statement below
--- #select l1.student_id, l1.subject, l1.score as first_score, l2.score as latest_score from latest_score l1 inner join latest_score l2 on l1.rn = 1 and l2.rn = l2.latest where l1.score < l2.score order by student_id, subject
 
 with cte as (
     select student_id, subject, score, exam_date, Row_Number() over (partition by student_id, subject order by exam_date) as rn from Scores
